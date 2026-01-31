@@ -1,0 +1,12 @@
+from sqlalchemy import Column, Integer, Float, DateTime
+from datetime import datetime
+from app.database import Base
+
+class SensorData(Base):
+    __tablename__ = "sensor_data"
+
+    id = Column(Integer, primary_key=True, index=True)
+    temperature = Column(Float)
+    humidity = Column(Float)
+    vibration = Column(Float)
+    timestamp = Column(DateTime, default=datetime.utcnow)
