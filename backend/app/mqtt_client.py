@@ -1,5 +1,6 @@
 from app.database import SessionLocal
 from app.models import SensorData
+from app.ml_predictor import predict_anomaly
 import paho.mqtt.client as mqtt
 import json
 
@@ -13,13 +14,16 @@ def on_connect(client, userdata, flags, rc, properties=None):
 
 def on_message(client, userdata, msg):
     data = json.loads(msg.payload.decode())
-    print(f"Received Sensor Data: {data}")
+    
+    status = predict_anomaly(data)
+    print(f"Received Data: {data} → {status}")
 
     db = SessionLocal()
     sensor_entry = SensorData(
         temperature=data["temperature"],
         humidity=data["humidity"],
-        vibration=data["vibration"]
+        vibration=data["vibration"],
+        status=status
     )
     db.add(sensor_entry)
     db.commit()

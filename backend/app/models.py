@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, Float, DateTime
+from sqlalchemy import Column, Integer, Float, DateTime, String
 from datetime import datetime
 from app.database import Base
 
@@ -9,4 +9,5 @@ class SensorData(Base):
     temperature = Column(Float)
     humidity = Column(Float)
     vibration = Column(Float)
+    status = Column(String)   # NORMAL or ANOMALY
     timestamp = Column(DateTime, default=datetime.utcnow)
