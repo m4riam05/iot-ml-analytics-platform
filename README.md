@@ -97,7 +97,7 @@ Make sure you have installed:
 
 ---
 
-### 1️⃣ Clone the Repository
+1️⃣ Clone the Repository
 
 ```bash
 git clone <your-repository-url>
@@ -156,7 +156,7 @@ Returns latest ML-detected anomalies in JSON format.
 This is now **step-by-step reproducible** — exactly what recruiters look for when they test a project.
 
 
-🗂 Project Structure
+## 🗂 Project Structure
 iot-ml-analytics-platform/
 │
 ├── device_simulator/   
@@ -171,14 +171,14 @@ iot-ml-analytics-platform/
 ├── dashboard2.png      
 └── README.md
 
-🔮 Future Improvements
+## 🔮 Future Improvements
 
 Cloud deployment (AWS/GCP)
 Alert notifications (email/telegram)
 User authentication
 Advanced ML models
 
-👩‍💻 Author
+## 👩‍💻 Author
 Mariam Jojo
 
 Engineering student passionate about building real-world software systems that combine IoT, AI, cloud, and data.
