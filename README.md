@@ -97,9 +97,11 @@ Make sure you have installed:
 
 ---
 
+```bash
+
 1️⃣ Clone the Repository
 
-```bash
+
 git clone <your-repository-url>
 cd iot-ml-analytics-platform
 2️⃣ Start Infrastructure Services
@@ -151,10 +153,7 @@ http://127.0.0.1:8000/alerts
 Returns latest ML-detected anomalies in JSON format.
 
 
----
-
-This is now **step-by-step reproducible** — exactly what recruiters look for when they test a project.
-
+```
 
 ## 🗂 Project Structure
 iot-ml-analytics-platform/
